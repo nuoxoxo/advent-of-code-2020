@@ -2,7 +2,6 @@ policy = []
 
 with open ('day2.txt', 'r') as file:
     for line in file:
-        item = []
         item = line.split()
         policy.append(item)
 
