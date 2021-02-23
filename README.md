@@ -49,7 +49,6 @@
         for line in file:
             elem = line.split()
             pax.append(elem)
-    # recollect all substrs of one passenger
     r = -1
     for x in range(len(pax)):
         r += 1
@@ -58,7 +57,6 @@
                 pax[x - r] += pax[y]
                 pax[y] = []
             r = 0
-    # filter empty strs
     pax = list(filter(None, pax))
 
 ##### .convert the txt to 
@@ -68,7 +66,6 @@
 
 ##### and then this block
 
-    # passengers converted to list of dictionaries
     paks = []
 
     for x in range(len(pacs)):
