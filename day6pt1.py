@@ -34,3 +34,4 @@ for x in range(len(team)):
     count += w
 
 print(count)
+
