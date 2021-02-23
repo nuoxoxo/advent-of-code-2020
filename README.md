@@ -1,6 +1,6 @@
 ## Combos
 
-### open a file
+### Open a file
 
     file = open('6.txt', 'r')
     team = [x.split() for x in file.readlines()]
