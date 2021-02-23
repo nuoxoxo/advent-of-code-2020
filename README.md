@@ -42,7 +42,7 @@
 
     ecl:#ae12d3 hgt:74cm cid:239 hcl:z pid:345439730 iyr:1924 byr:2029 eyr:2031
 
-#### this block :
+##### this block :
 
     pax = []
     with open('4.txt', 'r') as file:
@@ -66,7 +66,7 @@
     # ['hcl:#c0946f', 'ecl:brn', 'iyr:2017', 'eyr:2028', 'pid:161390075', 'byr:1993', 'cid:50', 'hgt:171cm']
     # ['ecl:#ae12d3', 'hgt:74cm', 'cid:239', 'hcl:z', 'pid:345439730', 'iyr:1924', 'byr:2029', 'eyr:2031']
 
-#### and then this block
+##### and then this block
 
     # passengers converted to list of dictionaries
     paks = []
