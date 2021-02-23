@@ -5,8 +5,6 @@ with open('4.txt', 'r') as file:
         elem = line.split()
         pax.append(elem)
 
-"""part 1"""
-
 # recollect all substrs of one passenger
 r = -1
 for x in range(len(pax)):
@@ -22,6 +20,8 @@ pax = list(filter(None, pax))
 
 # ['hcl:#c0946f', 'ecl:brn', 'iyr:2017', 'eyr:2028', 'pid:161390075', 'byr:1993', 'cid:50', 'hgt:171cm']
 # ['ecl:#ae12d3', 'hgt:74cm', 'cid:239', 'hcl:z', 'pid:345439730', 'iyr:1924', 'byr:2029', 'eyr:2031']
+
+"""part 1"""
 
 # Required fields
 reqd = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
@@ -63,21 +63,21 @@ for line in paks:
     i = 0
     if len(line['byr']) == 4:
         i += 1
-    if int(line['byr']) >= 1920 and int(line['byr']) <= 2002:
+    if 1920 <= int(line['byr']) <= 2002:
         i += 1
     if len(line['iyr']) == 4:
         i += 1
-    if int(line['iyr']) >= 2010 and int(line['iyr']) <= 2020:
+    if 2010 <= int(line['iyr']) <= 2020:
         i += 1
     if len(line['eyr']) == 4:
         i += 1
-    if int(line['eyr']) >= 2020 and int(line['eyr']) <= 2030:
+    if 2020 <= int(line['eyr']) <= 2030:
         i += 1
     if 'cm' in line['hgt']:
-        if int(line['hgt'].partition('cm')[0]) >= 150 and int(line['hgt'].partition('cm')[0]) <= 193:
+        if 150 <= int(line['hgt'].partition('cm')[0]) <= 193:
             i += 1
     if 'in' in line['hgt']:
-        if int(line['hgt'].partition('in')[0]) >= 59 and int(line['hgt'].partition('in')[0]) <= 76:
+        if 59 <= int(line['hgt'].partition('in')[0]) <= 76:
             i += 1
     if len(line['hcl']) == 7:
         i += 1
