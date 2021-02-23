@@ -8,7 +8,7 @@
         for line in file:
             seat.append(line.rstrip())
 ` 'BFFFBBBRRR', 'BFBBBBBRRL', 'FBBBFFFLLR']`
-
+*cf.* **day 5**
 ##
 
 ### Open a file
@@ -21,7 +21,7 @@
 ### Consider a list of strings like this
 
 `[, [...], ['juqckrl', 'ojlhsyfcn'], ['jngdhxfesqzwcptlmvb', 'tlpyhvnoxsagwmqrdzcue']]`
-
+*cf.* **day 6**
 ##### .count uniq chars
 
     n = 0
