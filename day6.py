@@ -35,6 +35,7 @@ for x in range(len(team)):
     n += len(lett)
 print(n)
 
+
 """ part 2 """
 n = 0
 for x in range(len(team)):
