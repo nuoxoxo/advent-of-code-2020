@@ -2,6 +2,17 @@
 
 ### Open a file
 
+##### basic way
+    seat = []
+    with open('5.txt') as file:
+        for line in file:
+            seat.append(line.rstrip())
+` 'BFFFBBBRRR', 'BFBBBBBRRL', 'FBBBFFFLLR']`
+
+##
+
+### Open a file
+
     file = open('6.txt', 'r')
     team = [x.split() for x in file.readlines()]
 ##### .split -> *list of lists*
