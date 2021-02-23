@@ -1,13 +1,13 @@
 ## Combos
 
-#### open a file
+### open a file
 
     file = open('6.txt', 'r')
     team = [x.split() for x in file.readlines()]
 ##### .split -> *list of lists*
 ##### .strip -> *list of strings*
 ##
-#### Consider a list of strings like this
+### Consider a list of strings like this
 
 `[, [...], ['juqckrl', 'ojlhsyfcn'], ['jngdhxfesqzwcptlmvb', 'tlpyhvnoxsagwmqrdzcue']]`
 
@@ -32,7 +32,7 @@
     print(n)
 *cf.* **day 6**
 ##
-#### Consider a <.txt> like this : 
+### Consider a <.txt> like this : 
 
     hcl:#c0946f
     ecl:brn
