@@ -3,6 +3,7 @@
 ### Open a file
 
 basic way
+
     seat = []
     with open('5.txt') as file:
         for line in file:
