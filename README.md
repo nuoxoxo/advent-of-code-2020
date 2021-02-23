@@ -8,20 +8,22 @@
         for line in file:
             seat.append(line.rstrip())
 ` 'BFFFBBBRRR', 'BFBBBBBRRL', 'FBBBFFFLLR']`
-*cf.* **day 5**
-##
 
+*cf.* day 5
+##
 ### Open a file
 
     file = open('6.txt', 'r')
     team = [x.split() for x in file.readlines()]
+
 ##### .split -> *list of lists*
 ##### .strip -> *list of strings*
+*cf.* day 6
 ##
 ### Consider a list of strings like this
 
 `[, [...], ['juqckrl', 'ojlhsyfcn'], ['jngdhxfesqzwcptlmvb', 'tlpyhvnoxsagwmqrdzcue']]`
-*cf.* **day 6**
+
 ##### .count uniq chars
 
     n = 0
@@ -41,7 +43,7 @@
         lett = [chr for chr, count in cntr.items() if count == len(team[x])]
         n += len(lett)
     print(n)
-*cf.* **day 6**
+*cf.* day 6
 ##
 ### Consider a <.txt> like this : 
 
@@ -87,4 +89,4 @@
 
     # {'hcl': '#c0946f', 'ecl': 'brn', 'iyr': '2017', 'eyr': '2028', 'pid': '161390075', 'byr': '1993', 'cid': '50', 'hgt': '171cm'}
     # {'ecl': '#ae12d3', 'hgt': '74cm', 'cid': '239', 'hcl': 'z', 'pid': '345439730', 'iyr': '1924', 'byr': '2029', 'eyr': '2031'}
-*cf.* **day 4**
+*cf.* day 4
