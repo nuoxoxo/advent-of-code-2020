@@ -14,12 +14,12 @@ basic way
 ##
 > ### Open a file
 
-    file = open('6.txt', 'r')
-    team = [x.split() for x in file.readlines()]
-
 ##### .split -> *list of lists*
 ##### .strip -> *list of strings*
 
+    file = open('6.txt', 'r')
+    team = [x.split() for x in file.readlines()]
+    
 *cf.* day 6
 ##
 ### Consider a list of strings like this
