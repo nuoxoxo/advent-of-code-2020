@@ -2,7 +2,7 @@
 
 ### Open a file
 
-##### basic way
+> ##### basic way
     seat = []
     with open('5.txt') as file:
         for line in file:
@@ -11,13 +11,14 @@
 
 *cf.* day 5
 ##
-### Open a file
+> ### Open a file
 
     file = open('6.txt', 'r')
     team = [x.split() for x in file.readlines()]
 
 ##### .split -> *list of lists*
 ##### .strip -> *list of strings*
+
 *cf.* day 6
 ##
 ### Consider a list of strings like this
@@ -43,6 +44,7 @@
         lett = [chr for chr, count in cntr.items() if count == len(team[x])]
         n += len(lett)
     print(n)
+    
 *cf.* day 6
 ##
 ### Consider a <.txt> like this : 
