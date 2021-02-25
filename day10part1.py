@@ -17,9 +17,6 @@ start = 0
 for x in range(len(a)):
     if a[x] == 1:
         start = x
-    # elif a[x] == max(a):
-    #     end = x
-
 
 x = 1 # x is jolt
 while True:
