@@ -1,6 +1,6 @@
 # 🎄
 
-### basic open a file 
+## basic open a file 
 ```python
 seat = []
 with open('5.txt') as file:
@@ -22,7 +22,7 @@ team = [x.split() for x in file.readlines()]
 
 *cf.* day 6
 ##
-### Consider a list of strings like this
+## Consider a list of strings like this
 
 `[, [...], ['juqckrl', 'ojlhsyfcn'], ['jngdhxfesqzwcptlmvb', 'tlpyhvnoxsagwmqrdzcue']]`
 
@@ -52,7 +52,7 @@ print(n)
 
 *cf.* day 6
 ##
-#### consider a <.txt> like this : 
+## consider a <.txt> like this : 
 
     hcl:#c0946f
     ecl:brn
