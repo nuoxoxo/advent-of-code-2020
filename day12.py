@@ -66,30 +66,44 @@ for i in path:
     if i[0] == 'E':
         wpx += int(i[1:])
 
-    if i[0] == "L":
-        if i[1:] == '90':
-            wpx = -wpy
-            wpy = wpx
-        if i[1:] == '180':
-            wpx = -wpx
-            wpy = -wpy
-        if i[1:] == '270':
-            wpx = wpy
-            wpy = -wpx
+    # if i[0] == "L":
+    #     if i[1:] == '90':
+    #         wpx = -wpy
+    #         wpy = wpx
+    #     if i[1:] == '180':
+    #         wpx = -wpx
+    #         wpy = -wpy
+    #     if i[1:] == '270':
+    #         wpx = wpy
+    #         wpy = -wpx
 
-    if i[0] == "R":
-        if i[1:] == '90':
-            wpx = wpy
-            wpy = -wpx
-        if i[1:] == '180':
+    # if i[0] == "R":
+    #     if i[1:] == '90':
+    #         wpx = wpy
+    #         wpy = -wpx
+    #     if i[1:] == '180':
+    #         wpx = -wpx
+    #         wpy = -wpy
+    #     if i[1:] == '270':
+    #         wpx = -wpy
+    #         wpy = wpx
+
+    if (i[0] == "L" and i[1:] == '90') or (i[0] == "R" and i[1:] == '270'):
+            tmp = wpx
+            wpx = -wpy
+            wpy = tmp
+
+    if i[1:] == '180' and (i[0] == "L" or i[0] == "R"):
             wpx = -wpx
             wpy = -wpy
-        if i[1:] == '270':
-            wpx = -wpy
-            wpy = wpx
+
+    if (i[0] == "L" and i[1:] == '270') or (i[0] == "R" and i[1:] == '90'):
+            tmp = wpx
+            wpx = wpy
+            wpy = -tmp
 
     if i[0] == "F":
-        x += wpx * int(i[1:])
-        y += wpy * int(i[1:])
+        x += (wpx * int(i[1:]))
+        y += (wpy * int(i[1:]))
 
 print(abs(x)+abs(y))
