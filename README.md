@@ -1,5 +1,5 @@
-- [] day 2 
-- [] 2019 day 1
+- [ ] day 2 
+- [ ] 2019 day 1
 - [x] day 1 adv 
   - [x] parse input 
   - [x] part 2
