@@ -20,7 +20,7 @@ for (let number of numberArr)
 
 // Part 2
 
-const pairsum = [];
+const pairsum = {};
 
 for (let i = 0; i < numberArr.length; i++)
 {
