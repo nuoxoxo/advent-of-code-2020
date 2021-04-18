@@ -1,4 +1,4 @@
 - [x] day 14 - parse input
-- [ ] day 01 adv 
+- [x] day 01 adv 
   - [x] parse input 
-  - [ ] implement header of day01.js 
+  - [x] part 2
