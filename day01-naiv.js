@@ -24,9 +24,6 @@ for (let i = 0; i < lines.length; i++)
             if (lines[i] + lines[j] + lines[k] == 2020)
             {
                 part2 = lines[i] * lines[j] * lines[k];
-            }
-        }
-    }
-}
+            }}}}
 
 console.log(part1 + "\n" + part2);
