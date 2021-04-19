@@ -2,12 +2,12 @@
 
 const fs = require('fs');
 
-//const lines = fs.readFileSync('2001.txt').toString().split('\n').filter(entry => entry)
+// Part 1
+
 const lines = fs.readFileSync('2001.txt').toString().split('\n')
 const numberArr = lines.map(Number);
 const numberSet = new Set();
 
-// Part 1
 
 for (let number of numberArr)
 {
