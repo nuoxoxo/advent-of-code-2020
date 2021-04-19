@@ -2,7 +2,8 @@
 
 const fs = require('fs');
 
-const lines = fs.readFileSync('2001.txt').toString().split('\n').filter(entry => entry)
+//const lines = fs.readFileSync('2001.txt').toString().split('\n').filter(entry => entry)
+const lines = fs.readFileSync('2001.txt').toString().split('\n')
 const numberArr = lines.map(Number);
 const numberSet = new Set();
 
