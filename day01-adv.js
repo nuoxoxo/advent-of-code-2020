@@ -1,57 +1,55 @@
-// O(n) constant time lookup
+// This solution: O(n) constant time lookup
+
+// Header and and parsing
 
 const fs = require('fs');
 
-// Part 1
-
 const lines = fs.readFileSync('2001.txt').toString().split('\n')
 const numberArr = lines.map(Number);
-const numberSet = new Set();
 
+// Part 1 function
 
-for (let number of numberArr)
-{
-  const diff = 2020 - number;
-  if (numberSet.has(diff))
-  {
-    console.log(number * diff);
-  }
-  numberSet.add(number);
+let partOne = arr => {
+    
+    let numberSet = new Set();
+
+    for (let number of arr){
+        const diff = 2020 - number;
+        if (numberSet.has(diff)){
+            console.log(number * diff);
+        }
+
+        numberSet.add(number);
+    }
 }
 
-// Part 2
+// Part 2 function
 
-const pairsum = {};
+let partTwo = arr => {
 
-for (let i = 0; i < numberArr.length; i++)
-{
-  for (let j = i + 1; j < numberArr.length; j++)
-  {
-    const sum = numberArr[i] + numberArr[j];
-    pairsum[sum] = [numberArr[i], numberArr[j]];
-  }
+    let pairsum = {};
+
+    // Populate the pairsum set
+
+    for (let i = 0; i < arr.length; i++){
+        for (let j = i + 1; j < arr.length; j++){
+            const sum = arr[i] + arr[j];
+            pairsum[sum] = [arr[i], arr[j]];
+        }
+    }
+
+    for (let number of arr){
+        const diff = 2020 - number;
+        if (diff in pairsum){
+            let [ a, b ] = pairsum[diff];
+            console.log(number * a * b);
+            break;
+        }
+    }
 }
 
-for (let number of numberArr)
-{
-  const diff = 2020 - number;
-  if (diff in pairsum)
-  {
-    let [ a, b ] = pairsum[diff];
-    console.log(number * a * b);
-    break;
-  }
-}
+// Driver
 
-// 
-// "js object" revision
-//
-// obj = {name: "my name", age: 45}
-//
-// 'name' in obj
-// > true
-//
-// 'age' in obj
-// > true
-//
+partOne(numberArr);
+partTwo(numberArr);
 
