@@ -1,9 +1,6 @@
 const fs = require('fs')
 const parseInput = (name, sp) => {
-  return fs
-    .readFileSync(name)
-    .toString()
-    .split(sp)
+  return fs.readFileSync(name).toString().split(sp)
 }
 const lines = parseInput('2001.txt', '\n').map(Number)
 

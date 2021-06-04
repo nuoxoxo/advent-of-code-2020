@@ -7,7 +7,7 @@ const numberArr = lines.map(Number);
 let partOne = arr => {
   let numberSet = new Set()
   for (let number of arr) {
-    const diff = 2020 - number
+    let diff = 2020 - number
     if (numberSet.has(diff)) {
       console.log(number * diff)
     }
