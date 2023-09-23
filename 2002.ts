@@ -40,9 +40,9 @@ const url = 'https://raw.githubusercontent.com/nuoxoxo/in/main/aoc/2002.' + infi
             let L = parseInt(temp[0]) - 1
             let R = parseInt(temp[1]) - 1
             let c = p[1].split(':')[0]
-            if (p[2][L].indexOf(c) !== -1 && p[2][R].indexOf(c) !== -1)
+            if (c === p[2][L] && c === p[2][R])
                 continue
-            if (p[2][L].indexOf(c) !== -1 || p[2][R].indexOf(c) !== -1)
+            if (c === p[2][L] || c === p[2][R])
                 ++res2
         }
 
