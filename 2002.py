@@ -1,6 +1,6 @@
 from helpers.reader import read_as_list
 
-infile = %
+infile = 'in'
 lines = read_as_list('2002.' + infile)
 lines.pop()
 
@@ -33,9 +33,9 @@ for p in P:
     L = int(temp[0]) - 1
     R = int(temp[1]) - 1
     c = p[1].split(':')[0]
-    if c in p[2][L] and c in p[2][R]:
+    if c == p[2][L] and c == p[2][R]:
         continue
-    if c in p[2][L] or c in p[2][R]:
+    if c == p[2][L] or c == p[2][R]:
         res2 += 1
 
 print('Part 1:', res1)
