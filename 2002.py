@@ -13,13 +13,13 @@ for line in lines:
 
 res1 = 0
 
-for x in range(len(P)):
+for p in P:
 
-    temp = P[x][0].split('-')
+    temp = p[0].split('-')
     mini = int(temp[0])
     maxi = int(temp[1])
-    c = P[x][1].split(':')[0]
-    cnt = P[x][2].count(c)
+    c = p[1].split(':')[0]
+    cnt = p[2].count(c)
     if mini <= cnt <= maxi:
         res1 += 1
 
@@ -27,15 +27,15 @@ for x in range(len(P)):
 
 res2 = 0
 
-for x in range(len(P)):
+for p in P:
 
-    temp = P[x][0].split('-')
+    temp = p[0].split('-')
     L = int(temp[0]) - 1
     R = int(temp[1]) - 1
-    c = P[x][1].split(':')[0]
-    if c in P[x][2][L] and c in P[x][2][R]:
+    c = p[1].split(':')[0]
+    if c in p[2][L] and c in p[2][R]:
         continue
-    if c in P[x][2][L] or c in P[x][2][R]:
+    if c in p[2][L] or c in p[2][R]:
         res2 += 1
 
 print('Part 1:', res1)
