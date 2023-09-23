@@ -1,29 +1,43 @@
-policy = []
+from helpers.reader import read_as_list
 
-with open ('day2.txt', 'r') as file:
-    for line in file:
-        item = line.split()
-        policy.append(item)
+infile = 'in'
+lines = read_as_list('2002.' + infile)
+lines.pop()
+
+P = []
+for line in lines:
+    item = line.split()
+    P.append(item)
 
 # part 1
-counter = 0
-for x in range(len(policy)):
-    mini = int(policy[x][0].partition('-')[0])
-    maxi = int(policy[x][0].partition('-')[2])
-    char = policy[x][1].partition(':')[0]
-    count = policy[x][2].count(char)
-    if count >= mini and count <= maxi:
-        counter += 1
-print(counter)
+
+res1 = 0
+
+for p in P:
+
+    temp = p[0].split('-')
+    mini = int(temp[0])
+    maxi = int(temp[1])
+    c = p[1][0]
+    cnt = p[2].count(c)
+    if mini <= cnt <= maxi:
+        res1 += 1
 
 # part 2
-counter = 0
-for x in range(len(policy)):
-    left = int(policy[x][0].partition('-')[0]) - 1
-    right = int(policy[x][0].partition('-')[2]) - 1
-    char = policy[x][1].partition(':')[0]
-    if char in policy[x][2][left] and char in policy[x][2][right]:
+
+res2 = 0
+
+for p in P:
+
+    temp = p[0].split('-')
+    L = int(temp[0]) - 1
+    R = int(temp[1]) - 1
+    c = p[1][0]
+    if c == p[2][L] and c == p[2][R]:
         continue
-    elif char in policy[x][2][left] or char in policy[x][2][right]:
-        counter += 1
-print(counter)
+    if c == p[2][L] or c == p[2][R]:
+        res2 += 1
+
+print('Part 1:', res1)
+print('Part 2:', res2)
+
