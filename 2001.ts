@@ -56,6 +56,6 @@ const url = 'https://raw.githubusercontent.com/nuoxoxo/in/main/aoc/2001.' + choi
         console.log('Part2: ', res2)
 
     } catch (e) {
-        console.log('error - ', e)
+        console.log(e)
     }
 })()
