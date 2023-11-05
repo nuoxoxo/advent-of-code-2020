@@ -50,7 +50,7 @@ const url = 'https://raw.githubusercontent.com/nuoxoxo/in/main/aoc/2002.' + infi
         console.log('Part 2:', res2)
 
     } catch (e) {
-        console.log('error - ', e)
+        console.log(e)
     }
 })()
 
